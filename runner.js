@@ -9,10 +9,10 @@ const fs = require('fs')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, banner, close } = require('./mess/myfunc')
 const { color } = require('./mess/color')
 const welcome = JSON.parse(fs.readFileSync('./storage/welcome.json'))
-number = '6285608625102@s.whatsapp.net'
+number = '6289654451511@s.whatsapp.net'
 
 require('./srv/zero.js')
-nocache('./srv/zero.js', module => console.log(`${module} Telah Di Updated... Jangan Lupa Subscribe LeonGanz`))
+nocache('./srv/zero.js', module => console.log(`${module} Telah Di Updated... Jangan Lupa Subscribe MjGanz`))
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 const starts = async (zero = new WAConnection()) => {
@@ -23,9 +23,9 @@ console.log(banner.string)
 console.log(color('[•] [ CREATED BY LEON] [•]'))
 console.log(color('Please Follow Me On Sosial Media'))
 console.log(color(' ==============================================='))
-console.log(color('│ ○ Youtube : https://youtube.com/c/LeonGanz                     '))
-console.log(color('│ ○ Instagram : https://instagram.com/leonvx                '))
-console.log(color('│ ○ Github : https://github.com/Bl4ck-lion                       '))
+console.log(color('│ ○ Youtube : https://youtube.com/channel/UCToeOJLlGj2t6kch9ME8vLA '))
+console.log(color('│ ○ Instagram : https://instagram.com/nisabotz     '))
+console.log(color('│ ○ Github : https://github.com/Bl4ck-lion                        '))
 console.log(color(' ==============================================='))
 zero.on('qr', () => {
 console.log(color('[','white'), color('!','red'), color(']','white'), color('Please... Scan Is Now Qr Code !'))
@@ -37,7 +37,7 @@ zero.on('connecting', () => {
 start('2', 'Sedang Menyambungkan Mohon Tunggu...')
 })
 zero.on('open', () => {
-success('2', 'Bot Telah Tersambung... Jangan Lupa Subscribe LeonGanz')
+success('2', 'Bot Telah Tersambung... Jangan Lupa Subscribe MjGanz')
 })
 await zero.connect({timeoutMs: 30*1000})
 fs.writeFileSync('./session/qrsession.json', JSON.stringify(zero.base64EncodedAuthInfo(), null, '\t'))
@@ -92,7 +92,7 @@ ppUrl = 'https://telegra.ph/file/c9dfa715c26518201f478.jpg'
 }
 img = await getBuffer(ppUrl)
 teks = `Hallo @${anu_user}\nSelamat Datang Di Group: ${mdata.subject}\n\nSemoga Betah Ya Di Group Ini`
-sendButImage(anu.jid, teks, `©Created By LeonGanz`, img,but = [{buttonId:`hallo`, 
+sendButImage(anu.jid, teks, `©Created By MjGanz`, img,but = [{buttonId:`hallo`, 
 buttonText:{displayText: 'SELAMAT DATANG!!!'},type:1}], options = {contextInfo: {mentionedJid: [num, number]},thumbnail: Buffer.alloc(0)})
 } else if (anu.action == 'remove') {
 num = anu.participants[0]
@@ -103,7 +103,7 @@ ppUrl = 'https://i.ibb.co/6BRf4Rc/Hans-Bot-No-Profile.png'
 }
 img = await getBuffer(ppUrl)
 teks = `Bye Bye @${num.split('@')[0]}\nSelamat Tinggal Di Group: ${mdata.subject}`
-sendButImage(anu.jid, teks, `©Created By LeonGanz`, img,but= [{buttonId: `byebye`, buttonText: {displayText: `SELAMAT TINGGAL!!!`}, type: 1}], options = {contextInfo: {mentionedJid: [num, number]}, thumbnail: Buffer.alloc(0)})
+sendButImage(anu.jid, teks, `©Created By MjGanz`, img,but= [{buttonId: `byebye`, buttonText: {displayText: `SELAMAT TINGGAL!!!`}, type: 1}], options = {contextInfo: {mentionedJid: [num, number]}, thumbnail: Buffer.alloc(0)})
 }
 if (anu.action == "promote") {
 anu_user = zero.contacts[mem]
